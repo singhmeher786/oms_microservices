@@ -80,26 +80,6 @@ services:
     networks:
     - sales-order-system
 
-  sales-order-system-client:
-    build: ./sales-order-system
-    container_name: sales-order-system-app
-    expose:
-    - "80"
-    ports:
-    - "80:80"
-    networks:
-    - sales-order-system
-    depends_on:
-    - 'user-service'
-    - 'customer-service'
-    - 'order-service'
-    - 'product-service'
-    links:
-    - user-service
-    - customer-service
-    - order-service
-    - product-service
-
 networks:
   sales-order-system:
     external: false
