@@ -1,0 +1,26 @@
+version: "3"
+services:
+  customer-service:
+    build: .
+    container_name: customer-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    ports:
+      - "8081:8081"
+    networks:
+      - customer-mysql
+
+  customer-db-mysql:
+    image: mysql:8
+    container_name: customer-service-mysql
+    ports:
+    - "3306:3306"
+    networks:
+      - customer-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=customerdb
+
+networks:
+  customer-mysql:
+    external: false
