@@ -1,8 +1,8 @@
 
 ## Software Architecture
 
-Each business domain is segregated into their own microservices which exposes RESTful API endpoints for the client to consume.Each backend microservice & its associated data storage components are dockerized.The above mentions how this application is systemed up. It is built as a series of Docker containers that can be run anywhere.
-For simulating a prod-like environment, this demo project would live on the AWS Cloud Platform and can be run as either Docker containers running directly inside EC2 instances or being managed by a container orchestration framework in Kubernetes (AWS EKS).
+Each business domain is divided into its own microservices, which offer RESTful API endpoints to the client.Dockerizes each backend microservice and its accompanying data storage components.The above describes how this application is organised. It is composed of Docker containers that may be operated anywhere.
+This showcase project would be hosted on the GCP Cloud Platform and run as either Docker containers running directly within Compute Engine or managed by a container orchestration framework in Kubernetes (GKE).
 
 
 ## Running Application
